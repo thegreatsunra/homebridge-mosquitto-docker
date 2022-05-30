@@ -9,7 +9,7 @@
 
 ## Usage
 
-1. Rename `example.env` to `.env` and update variable values it contains as suits your purposes.
+1. Copy `./mosquitto/example.env` to `./mosquott/.env` and update the variable values it contains as suits your purposes.
 
 2. Run the thing:
 
