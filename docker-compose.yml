@@ -1,5 +1,22 @@
 version: "3.8"
 
+services:
+  homebridge:
+    container_name: homebridge
+    environment:
+      - HOMEBRIDGE_CONFIG_UI_PORT=8581
+      - HOMEBRIDGE_CONFIG_UI=1
+      - PGID=1000
+      - PUID=1000
+      - TZ=America/Chicago
+    image: oznu/homebridge:latest
+    ## Homebridge requires full access to your local network to function correctly
+    ## `network_mode: host` satisfies this. `ports:` mapping does not.
+    network_mode: host
+    restart: always
+    volumes:
+      - ./homebridge:/homebridge
+
   mosquitto:
     container_name: mosquitto
     build: ./mosquitto
