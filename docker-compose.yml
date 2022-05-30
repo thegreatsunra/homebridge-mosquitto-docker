@@ -2,6 +2,9 @@ version: "3.8"
 
   mosquitto:
     container_name: mosquitto
+    build: ./mosquitto
+    env_file:
+      - ./mosquitto/.env
     ports:
       - 1883:1883
     restart: always
