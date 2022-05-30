@@ -9,7 +9,7 @@
 
 ## Usage
 
-1. Change the name of `example.env` to `.env` and update the values as necessary.
+1. Rename `example.env` to `.env` and update variable values it contains as suits your purposes.
 
 2. Run the thing:
 
