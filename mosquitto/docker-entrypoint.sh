@@ -3,6 +3,11 @@
 set -euo pipefail
 
 
+## Fix write permissions for mosquitto directories
+chown --no-dereference --recursive "$USER" /mosquitto/log
+chown --no-dereference --recursive "$USER" /mosquitto/data
+
+
 if [ -z "${MOSQUITTO_USERNAME}" ] || [ -z "${MOSQUITTO_PASSWORD}" ]; then
   echo MOSQUITTO_USERNAME or MOSQUITTO_PASSWORD not defined
   exit 1
