@@ -16,6 +16,8 @@ cd homebridge-mosquitto-docker
 
 ## Usage
 
+Assuming you have Docker installed...
+
 1. Copy `./mosquitto/example.env` to `./mosquitto/.env` and update the variable values it contains as suits your purposes.
 
 2. From the project root, run the whole thing:
